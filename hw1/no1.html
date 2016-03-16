@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#header {
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:20px;
+    background-color:rgb(128,128,128);
+    height:60px;
+    width:1225px;
+    text-align:center;
+    padding:5px;	      
+}
+#section {
+    width:700px;
+    height:400px;
+    float:left;
+    padding:10px;	 	 
+}
+#aside {
+    width:300px;
+    height:500px;
+    float:left;
+    padding:10px;	 	 
+}
+
+#footer {
+    background-color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+</style>
+  <title>NO1</title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+
+<div id="header">
+<h1 style="color:orange;"><em>自我介紹</em></h1>
+</div>
+
+<div id="nav">
+<h2 style="color:white;"><i>102213022 黃之揚</i></h2>
+</div>
+
+<div id="section">
+<h3>我來自台南,台南好吃又好玩,天氣又好房價又不貴<br>少了大都市擁擠忙碌的感覺多了許多悠閒的感覺<br>父母都是老師,有一個大我四歲的姊姊目前在美國唸書<br>我喜歡一些新奇創意的東西,平時喜歡打羽球看電影</h3>
+</div>
+
+<div id="aside">
+<img src="0729.jpg" width="350" height="350">
+</div>
+<script>
+function myFunction() {
+    var x = document.getElementById("section");
+    x.style.fontSize = "25px";           
+    x.style.color = "red"; 
+}
+</script>
+<button type="button" onclick="myFunction()">Change color!</button>
+
+
+<div id="footer">
+<h3 style="color:orange;"><em>contact me</em></h3>
+</div>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<p id="demo"></p>
+
+
+
+
+</body>
+</html>
