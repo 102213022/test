@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Angular</title>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <script src=""></script>
+    <script src=""></script>
+    
+    
+</head>
+
+
+<body ng-app="BoboList">
+    <div ng-controller="ListCtrl as vm">
+        <div >
+            <h1>BoboList</h1>
+    
+            <form class="form">
+                <input type="text" ng-model="vm.listName" /> 
+                <button ng-click="vm.auth(vm.listName)">login</button>
+            </form>
+            <br/>
+            <form class="form">
+                <input type="text" ng-model="vm.newTaskText" /> 
+                <button ng-click="vm.addTask(vm.newTaskText)">add!!</button>
+            </form>
+            
+            <ul>
+                <li ng-repeat="task in vm.tasks">
+                    <input type="checkbox" ng-model="task.isDone" ng-change="vm.updateTask(task)"/>
+                    <span ng-bind="task.text"></span>
+                    <button ng-click="vm.deleteTask(task.id)">delete</button>
+                </li>
+            </ul>
+            <button ng-click="vm.getTasks(listName)">Refresh</button>
+        </div>
+    </div>
+   
+</body>
+
+</html>
